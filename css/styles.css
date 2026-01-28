@@ -1,0 +1,109 @@
+/* ============================================
+   ADEFARMO - ESTILOS GLOBAIS
+   ============================================ */
+
+:root {
+    /* Cores Primárias - Identidade ADEFARMO */
+    --color-primary: #800020;        /* Vinho (Burgundy) */
+    --color-primary-dark: #600018;   /* Vinho Escuro */
+    --color-secondary: #FF8C00;      /* Laranja (Dark Orange) */
+    --color-success: #2E8B57;        /* Verde (Sea Green) */
+    --color-info: #00008B;           /* Azul (Dark Blue) */
+    
+    /* Cores Neutras - Light Mode */
+    --color-bg: #FDFDFD;             
+    --color-bg-secondary: #FFFFFF;
+    --color-text: #1A1A1A;           
+    --color-text-secondary: #4A4A4A;
+    --color-border: #E0E0E0;
+    
+    /* Cores Dark Mode */
+    --color-bg-dark: #121212;        
+    --color-bg-secondary-dark: #1E1E1E;
+    --color-text-dark: #E0E0E0;
+    --color-text-secondary-dark: #A0A0A0;
+    --color-border-dark: #333333;
+    
+    /* Espaçamento e Bordas */
+    --spacing-md: 1.5rem;
+    --radius-lg: 0.75rem;
+    --transition-base: 300ms ease-in-out;
+}
+
+body.dark-mode {
+    --color-bg: var(--color-bg-dark);
+    --color-bg-secondary: var(--color-bg-secondary-dark);
+    --color-text: var(--color-text-dark);
+    --color-text-secondary: var(--color-text-secondary-dark);
+    --color-border: var(--color-border-dark);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header & Nav */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+}
+.dark-mode .glass-nav {
+    background: rgba(18, 18, 18, 0.8);
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+/* Hero Section */
+.hero-adefarmo {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Cards */
+.card-ngo {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-ngo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn-adefarmo {
+    background-color: var(--color-primary);
+    color: white !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+}
+.btn-adefarmo:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.text-brand { color: var(--color-primary); }
+.bg-brand { background-color: var(--color-primary); }
+.bg-orange { background-color: var(--color-secondary); }
+.bg-green { background-color: var(--color-success); }
+.bg-blue { background-color: var(--color-info); }
