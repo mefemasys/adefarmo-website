@@ -1,7 +1,7 @@
 <?php
 
 // URL base do projecto
-define('BASE_URL', 'https://demo-adefarmomz.mefemasys.co.mz'); // muda para o teu domínio real
+define('BASE_URL', 'https://demo.mefemasys.co.mz/adefarmo-website'); // muda para o teu domínio real
 
 /**
  * Retorna URL absoluta para o ficheiro/página fornecida
